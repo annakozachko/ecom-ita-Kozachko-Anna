@@ -1,7 +1,6 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class RegistrationPage extends BasePage {
 
@@ -11,7 +10,7 @@ public class RegistrationPage extends BasePage {
     private static final String REGISTRATION_FIELD = "//input[@name='%s']";
 
     private static final String SUBSCRIBE_CHOICE_RADIO_BUTTON = "//div[@class='form-group']";
-    private static final String SUBMITT_BUTTON = "//label[@class='radio-inline'][2]";
+    private static final String SUBMIT_BUTTON = "//label[@class='radio-inline'][2]";
     private static final String PRIVACY_POLICY = "//input[@name='agree']";
     private static final String CONTINUE = "//input[@class='btn btn-primary']";
     private static final String EMAIL_DOES_NOT_APPEAR_MESSAGE = "//div[@class='text-danger']";
@@ -32,7 +31,7 @@ public class RegistrationPage extends BasePage {
     }
 
     public void clickSubmitButton() {
-        findElementBy(By.xpath(SUBMITT_BUTTON)).click();
+        findElementBy(By.xpath(SUBMIT_BUTTON)).click();
     }
 
 
@@ -41,18 +40,24 @@ public class RegistrationPage extends BasePage {
     }
 
     public String getEmailDoesNotAppearMessage() {
-       String text = findElementBy(By.xpath(EMAIL_DOES_NOT_APPEAR_MESSAGE)).getText();
-        return text;
+        return findElementBy(By.xpath(EMAIL_DOES_NOT_APPEAR_MESSAGE)).getText();
+
     }
-    public String getCheckboxIsNotFilledActualMessage(){
-        String text = findElementBy(By.xpath(CHECKBOX_IS_NOT_FILLED_ACTUAL_MESSAGE)).getText();
-        return text;
+
+    public String getCheckboxIsNotFilledActualMessage() {
+        return findElementBy(By.xpath(CHECKBOX_IS_NOT_FILLED_ACTUAL_MESSAGE)).getText();
+
     }
-    public String getTelephoneDoesNotAppearMessage(){
-        String text = findElementBy(By.xpath(TELEPHONE_DOES_NOT_APPEAR_MESSAGE)).getText();
-        return text;
+
+    public String getTelephoneDoesNotAppearMessage() {
+        return findElementBy(By.xpath(TELEPHONE_DOES_NOT_APPEAR_MESSAGE)).getText();
+
     }
-    public Boolean isYourStoreTitleDisplayed(){return findElementBy(By.xpath(YOUR_STORE_TITLE)).isDisplayed();}
+
+    public Boolean isYourStoreTitleDisplayed() {
+        return findElementBy(By.xpath(YOUR_STORE_TITLE)).isDisplayed();
+    }
+
 
 }
 
