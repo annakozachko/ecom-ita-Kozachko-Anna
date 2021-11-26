@@ -9,7 +9,7 @@ public class RegistrationTest extends BaseTest {
     private RegistrationPage registrationPage;
     private static final String emailDoesNotAppearExpectedMessage = "E-Mail Address does not appear to be valid!";
     private static final String checkboxIsNotFilledExpectedMessage  = "Warning: You must agree to the Privacy Policy!";
-    private static final String telephonelDoesNotAppearExpectedMessage = "Telephone must be between 3 and 32 characters!";
+    private static final String telephoneDoesNotAppearExpectedMessage = "Telephone must be between 3 and 32 characters!";
 
     @Test
     void unsuccessfulRegistrationWithEmptyEmailField() {
@@ -22,7 +22,7 @@ public class RegistrationTest extends BaseTest {
         registrationPage.inputDataToRegistrationField("password", "12345");
         registrationPage.inputDataToRegistrationField("confirm", "12345");
         registrationPage.clickPrivacyPolicyCheckbox();
-        registrationPage.clickSubmitButton();
+        registrationPage.clickSubmitButtonYes();
         registrationPage.clickButtonContinue();
         String emailDoesNotAppearActualMessage = registrationPage.getEmailDoesNotAppearMessage();
         Assertions.assertThat(emailDoesNotAppearExpectedMessage).as("another error message").isEqualTo(emailDoesNotAppearActualMessage);
@@ -35,12 +35,12 @@ public class RegistrationTest extends BaseTest {
         registrationPage.headerComponent().clickRegisterFromDropdown();
         registrationPage.inputDataToRegistrationField("firstname", "Anna");
         registrationPage.inputDataToRegistrationField("lastname", "Kozachko");
-        registrationPage.inputDataToRegistrationField("email", "anna.kozachko@gmail.com");
+        registrationPage.inputDataToRegistrationField("email", "sajowi9588@epeva.com");
         registrationPage.inputDataToRegistrationField("telephone", "0503899478");
-        registrationPage.inputDataToRegistrationField("password", "12345");
-        registrationPage.inputDataToRegistrationField("confirm", "12345");
+        registrationPage.inputDataToRegistrationField("password", "123123");
+        registrationPage.inputDataToRegistrationField("confirm", "123123");
         registrationPage.clickPrivacyPolicyCheckbox();
-        registrationPage.clickSubmitButton();
+        registrationPage.clickSubmitButtonYes();
         registrationPage.clickButtonContinue();
         Assertions.assertThat(registrationPage.isYourStoreTitleDisplayed()).isEqualTo(true);
     }
@@ -55,7 +55,7 @@ public class RegistrationTest extends BaseTest {
         registrationPage.inputDataToRegistrationField("telephone", "0503899478");
         registrationPage.inputDataToRegistrationField("password", "12345");
         registrationPage.inputDataToRegistrationField("confirm", "12345");
-        registrationPage.clickSubmitButton();
+        registrationPage.clickSubmitButtonYes();
         registrationPage.clickButtonContinue();
         String checkboxIsNotFilledActualMessage = registrationPage.getCheckboxIsNotFilledActualMessage();
         Assertions.assertThat(checkboxIsNotFilledExpectedMessage).as("another error message").isEqualTo(checkboxIsNotFilledActualMessage);
@@ -72,10 +72,10 @@ public class RegistrationTest extends BaseTest {
         registrationPage.inputDataToRegistrationField("password", "12345");
         registrationPage.inputDataToRegistrationField("confirm", "12345");
         registrationPage.clickPrivacyPolicyCheckbox();
-        registrationPage.clickSubmitButton();
+        registrationPage.clickSubmitButtonYes();
         registrationPage.clickButtonContinue();
-        String telephonelDoesNotAppearActualMessage = registrationPage.getTelephoneDoesNotAppearMessage();
-        Assertions.assertThat(telephonelDoesNotAppearExpectedMessage).as("another error message").isEqualTo(telephonelDoesNotAppearActualMessage);
+        String telephoneDoesNotAppearActualMessage = registrationPage.getTelephoneDoesNotAppearMessage();
+        Assertions.assertThat(telephoneDoesNotAppearExpectedMessage).as("another error message").isEqualTo(telephoneDoesNotAppearActualMessage);
 
     }
 

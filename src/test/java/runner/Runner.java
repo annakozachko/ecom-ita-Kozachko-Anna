@@ -9,5 +9,5 @@ import io.cucumber.junit.CucumberOptions;
         plugin = {"json:build/cucumber.json",
                 "html:build/site/cucumber-pretty"},
         stepNotifications = true)
-public class Ranner {
+public class Runner {
 }

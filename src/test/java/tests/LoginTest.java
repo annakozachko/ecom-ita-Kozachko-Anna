@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest {
     private static final String loginErrorExpectedText = "Warning: No match for E-Mail Address and/or Password.";
 
     @Test
-    void errorAllertValidationOnLoginPage() {
+    void errorAlertValidationOnLoginPage() {
         loginPage = new LoginPage();
         loginPage.clickAccountDropdown();
         loginPage.clickLoginFromDropdown();
@@ -23,7 +23,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    void errorAllertInvalidPassword() {
+    void errorAlertInvalidPassword() {
         loginPage = new LoginPage();
         loginPage.clickAccountDropdown();
         loginPage.clickLoginFromDropdown();
@@ -37,7 +37,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    void AllertValidLoginAndPassword() {
+    void AlertValidLoginAndPassword() {
         loginPage = new LoginPage();
         loginPage.clickAccountDropdown();
         loginPage.clickLoginFromDropdown();
@@ -48,7 +48,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    void errorAllertEmptyFieldPassword() {
+    void errorAlertEmptyFieldPassword() {
         loginPage = new LoginPage();
         loginPage.clickAccountDropdown();
         loginPage.clickLoginFromDropdown();
@@ -59,7 +59,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    void errorAllertEmptyFieldEmail() {
+    void errorAlertEmptyFieldEmail() {
         loginPage = new LoginPage();
         loginPage.clickAccountDropdown();
         loginPage.clickLoginFromDropdown();
@@ -70,7 +70,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    void errorAllertEmptyFieldEmailAndFieldPassword() {
+    void errorAlertEmptyFieldEmailAndFieldPassword() {
         loginPage = new LoginPage();
         loginPage.clickAccountDropdown();
         loginPage.clickLoginFromDropdown();

@@ -1,13 +1,33 @@
 Feature: As an unregistered user
-  I want to register to the system with my credentials
+  I want to log in to the system with my credentials
   So that I can have access to store
 
-  Scenario: My Account is displayed after successful login
+#  Scenario:[ENUM] My Account is displayed after successful login
+#    Given Login page is opened in header dropdown
+#    When I enter in the enum field EMAIL_INPUT_FIELD data 'sajowi9588@epeva.com' on Login page
+#    And I enter to PASSWORD_INPUT_FIELD field '123123' on Login page
+#    And I click 'Login' button on Login page
+#    Then My Account Page is displayed
+
+  Scenario:[PARAMS] My Account page is displayed after successful login
     Given Login page is opened in header dropdown
-    When I enter email 'sajowi9588@epeva.com' on Login page
-    And I enter password '123123' on Login page
-    And I click the button Login on Login page
+    When I enter in the field 'email' data 'sajowi9588@epeva.com' on Login page
+    And I enter in the field 'password' data '123123' on Login page
+    And I click 'Login' button on Login page
+    Then My Account page is displayed
+
+  Scenario:[ENUM] My Account page is displayed after successful login
+    Given Login page is opened in header dropdown
+    When I enter in the enum field EMAIL_INPUT_FIELD data 'sajowi9588@epeva.com' on Login page
+    And I enter in the enum field PASSWORD_INPUT_FIELD data '123123' on Login page
+    And I click 'Login' button on Login page
+    Then My Account page is displayed
+
+  Scenario[DATA TABLE] My Account is displayed after successful login
+    Given Login page is opened in header dropdown
+    When I enter text into field on Login Page:
+      | inputData            | fieldName |
+      | sajowi9588@epeva.com | email     |
+      | 123123               | password  |
+    And  I click 'Login' button on Login page
     Then My Account Page is displayed
-
-
-
