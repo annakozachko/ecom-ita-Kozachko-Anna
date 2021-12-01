@@ -1,5 +1,6 @@
 package steps;
 
+import enums.elements.RegistrationPageInputField;
 import enums.table.TableField;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -76,7 +77,7 @@ public class RegistrationStepdefs {
     }
 
     @When("I enter in the enum field {} data {string} on Registration page")
-    public void iEnterInTheEnumFieldFIRST_NAME_FIELDDataAnnaOnRegistrationPage(String field, String data) {
+    public void iEnterInTheEnumFieldFIRST_NAME_FIELDDataAnnaOnRegistrationPage(RegistrationPageInputField field, String data) {
         registrationPage.inputDataToInputEnumField(field, data);
     }
 }

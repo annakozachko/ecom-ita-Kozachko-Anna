@@ -1,5 +1,6 @@
 package pages;
 
+import enums.elements.RegistrationPageInputField;
 import org.openqa.selenium.By;
 
 public class RegistrationPage extends BasePage {
@@ -80,8 +81,8 @@ public class RegistrationPage extends BasePage {
     public void inputDataToInputField(String field, String data){
         findElementBy(By.xpath(String.format(REGISTRATION_FIELD, field))).sendKeys(data);
     }
-    public void inputDataToInputEnumField(String field, String data){
-        findElementBy(By.xpath(String.format(REGISTRATION_FIELD, field))).sendKeys(data);
+    public void inputDataToInputEnumField(RegistrationPageInputField field, String data){
+        findElementBy(By.xpath(String.format(REGISTRATION_FIELD, field.toString()))).sendKeys(data);
     }
 }
 

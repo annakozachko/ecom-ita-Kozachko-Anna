@@ -6,7 +6,7 @@ Feature: As an unregistered user
     Given Registration page is opened in header dropdown
     When  I enter in the field 'firstname' data 'Anna' on Registration page
     And  I enter in the field 'lastname' data 'Kozachko' on Registration page
-    And  I enter in the field 'email' data 'sajowi9588@epeva.com' on Registration page
+    And  I enter in the field 'email' data 's999ajowi9588@epeva.com' on Registration page
     And  I enter in the field 'telephone' data '0503899478' on Registration page
     And  I enter in the field 'password' data '123123' on Registration page
     #confirm password
@@ -58,7 +58,7 @@ Feature: As an unregistered user
     Then Message 'Telephone must be between 3 and 32 characters!' is displayed under the empty telephone field
 
 
-  Scenario[DATA TABLE] Successful registration message is displayed after successful registration
+  Scenario:[DATA TABLE] Successful registration message is displayed after successful registration
     Given Registration page is opened in header dropdown
     When I enter text into field on Registration Page:
       | inputData            | fieldName |
@@ -74,7 +74,7 @@ Feature: As an unregistered user
     And  I click button Continue after Registration
     Then My Account Page is displayed
 
-  Scenario[DATA TABLE] Unsuccessful registration message is displayed after unsuccessful registration without email
+  Scenario:[DATA TABLE] Unsuccessful registration message is displayed after unsuccessful registration without email
     Given Registration page is opened in header dropdown
     When I enter text into field on Registration Page:
       | inputData            | fieldName |

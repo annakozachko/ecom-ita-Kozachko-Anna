@@ -7,5 +7,6 @@ public class MyAccountPage extends BasePage{
 
     public Boolean isMyAccountHeaderVisible() {
         return findElementBy(By.xpath(MY_ACCOUNT_INFORMATION)).isDisplayed();
+
     }
 }

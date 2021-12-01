@@ -40,12 +40,17 @@ public class LoginPageStepdefs {
         }
     }
 
-    @And("I click {string} button on Login page")
-    public void iClickLoginButtonOnLoginPage() {
-        loginPage.clickSubmitButton();
-    }
+//    @And("I click {string} button on Login page")
+//    public void iClickLoginButtonOnLoginPage() {
+//        loginPage.clickSubmitButton();
+//    }
 
     @Then("My Account page is displayed")
     public void myAccountPageIsDisplayed() {
+    }
+
+    @And("I click Login button on Login page")
+    public void iClickLoginButtonOnLoginPage() {
+        loginPage.clickSubmitButton();
     }
 }
