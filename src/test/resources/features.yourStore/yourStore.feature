@@ -28,7 +28,7 @@ Feature: As an registered user
     And My Account page is displayed
     And I click on Your Store link
     And I click on the button Add to cart
-    Then Message 'You have added MacBook to your shopping cart!' is displayed under header
+    Then Message 'Success: You have added MacBook to your shopping cart!' is displayed under header
 
 
 

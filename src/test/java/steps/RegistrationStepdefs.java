@@ -48,7 +48,12 @@ public class RegistrationStepdefs {
     public void messageYouMustAgreeToThePrivacyPolicyIsDisplayedAboveRegisterAccount(String message) {
         String checkboxIsNotActualMessage = registrationPage.getCheckboxIsNotFilledActualMessage();
         Assertions.assertThat(message).as(String.format("Expected: %s, Actual: %s", message, checkboxIsNotActualMessage)).isEqualTo(checkboxIsNotActualMessage);
+      //  registrationPage.implicitlyWait();
+      //  Assertions.assertThat(checkboxIsNotActualMessage).as(String.format("Expected: %s, Actual: %s", message, checkboxIsNotActualMessage)).contains(message);
+
+
     }
+
 
     @Then("Message {string}is displayed under the empty email field")
     public void messageEMailAddressDoesNotAppearToBeValidIsDisplayedUnderTheEmptyEmailField(String message) {

@@ -34,7 +34,7 @@ Feature: As an unregistered user
     Given Registration page is opened in header dropdown
     When  I enter in the field 'firstname' data 'First' on Registration page
     And  I enter in the field 'lastname' data 'First' on Registration page
-    And  I enter in the field 'email' data 'sajowi9588@epeva.com' on Registration page
+    And  I enter in the field 'email' data 'iaaa9588@epeva.com' on Registration page
     And  I enter in the field 'telephone' data '0503899478' on Registration page
     And  I enter in the field 'password' data '123123' on Registration page
     #confirm password
@@ -48,7 +48,7 @@ Feature: As an unregistered user
     Given Registration page is opened in header dropdown
     When  I enter in the field 'firstname' data 'First' on Registration page
     And  I enter in the field 'lastname' data 'First' on Registration page
-    And  I enter in the field 'email' data 'sajowi9588@epeva.com' on Registration page
+    And  I enter in the field 'email' data 'sajow9588@epeva.com' on Registration page
     And  I enter in the field 'password' data '123123' on Registration page
     #confirm password
     And  I enter in the field 'confirm' data '123123' on Registration page
@@ -64,7 +64,7 @@ Feature: As an unregistered user
       | inputData            | fieldName |
       | Anna                 | firstname |
       | Kozachko             | lastname  |
-      | sajowi9588@epeva.com | email     |
+      | saowi9588@epeva.com | email     |
       | 0503899478           | telephone |
       | 123123               | password  |
       | 123123               | confirm   |
@@ -92,7 +92,7 @@ Feature: As an unregistered user
     Given Registration page is opened in header dropdown
     When  I enter in the enum field FIRST_NAME_FIELD data 'Anna' on Registration page
     And  I enter in the enum field LAST_NAME_FIELD data 'Kozachko' on Registration page
-    And  I enter in the enum field EMAIL_FIELD data 'sajowi9588@epeva.com' on Registration page
+    And  I enter in the enum field EMAIL_FIELD data 'sajovwi9588@epeva.com' on Registration page
     And  I enter in the enum field TELEPHONE_FIELD data '0503899478' on Registration page
     And  I enter in the enum field PASSWORD_FIELD data '123123' on Registration page
     #confirm password

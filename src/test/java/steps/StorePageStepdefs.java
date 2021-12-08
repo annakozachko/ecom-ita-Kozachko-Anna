@@ -24,8 +24,10 @@ public class StorePageStepdefs {
 
     @Then("Message {string} is displayed under header")
     public void messageYouHaveAddedMacBookToYourShoppingCartIsDisplayedUnderHeader(String message) {
+        yourStorePage.implicitlyWait();
         String successActualMassageAddToCart = yourStorePage.getSuccessMassageAddToCart();
-        Assertions.assertThat(message).as(String.format("Expected: %s, Actual: %s", message, successActualMassageAddToCart)).isEqualTo(successActualMassageAddToCart);
+       // Assertions.assertThat(successActualMassageAddToCart).as(String.format("Expected: %s, Actual: %s", message, successActualMassageAddToCart)).isEqualTo(message);
+        Assertions.assertThat(successActualMassageAddToCart).as(String.format("Expected: %s, Actual: %s", message, successActualMassageAddToCart)).contains(message);
     }
 
     @And("I click on Your Store link")
@@ -56,8 +58,9 @@ public class StorePageStepdefs {
     @Then("Unsuccessful message {string} is displayed under header")
     public void unsuccessfulMessageYouMustLoginOrCreateAnAccountToSaveMacBookToYourWishListIsDisplayedUnderHeader(String message) {
         String successActualMassageAddToWishList = yourStorePage.getSuccessMassageAddToWishList();
-        Assertions.assertThat(message).as(String.format
-                ("Expected: %s, Actual: %s", message, successActualMassageAddToWishList)).isEqualTo(successActualMassageAddToWishList);
+        Assertions.assertThat(successActualMassageAddToWishList).as(String.format
+                ("Expected: %s, Actual: %s", message, successActualMassageAddToWishList)).contains(message);
+
         yourStorePage.isUnSuccessMassageAddToWishListIsDisplayed();
     }
 

@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class YourStorePage extends BasePage {
 
@@ -70,6 +71,7 @@ public class YourStorePage extends BasePage {
     }
 
     public String getSuccessMassageAddToCart() {
+        WebElement a = findElementBy(By.xpath(SUCCESS_MESSAGE_ADD_TO_CART));
         return findElementBy(By.xpath(SUCCESS_MESSAGE_ADD_TO_CART)).getText();
     }
 

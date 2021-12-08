@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 import pages.LoginPage;
 
 import java.util.Map;
-
+//@Log4j
 public class LoginPageStepdefs {
     private static final LoginPage loginPage = new LoginPage();
 
@@ -52,5 +52,24 @@ public class LoginPageStepdefs {
     @And("I click Login button on Login page")
     public void iClickLoginButtonOnLoginPage() {
         loginPage.clickSubmitButton();
+    }
+
+    @Given("User is logged in on Login Page")
+    public void userIsLoggedInOnLoginPage() {
+//        loginPage.headerComponent().clickAccountDropdown();
+//        log.info("Account dropdown is opening");
+//        loginPage.headerComponent().clickLoginFromDropdown();
+//        log.info("Login page is opening");
+//
+//        String email = PropertyLoader.getProperty("USER_EMAIL");
+//        String password = PropertyLoader.getProperty("USER_PASSWORD");
+//
+//        log.info(String.format("Entering email %s", email));
+//
+//        loginPage.inputDataToInputField(LoginPageInputField.EMAIL_INPUT_FIELD.toString(), email);
+//        log.info(String.format("Entering password %s", password));
+//        loginPage.inputDataToInputField(LoginPageInputField.PASSWORD_INPUT_FIELD.toString(), password);
+//        log.info("Click submit button");
+//        loginPage.clickSubmitButton();
     }
 }

@@ -9,12 +9,12 @@ Feature: As an unregistered user
 #    And I click 'Login' button on Login page
 #    Then My Account Page is displayed
 @login
-  Scenario:[PARAMS] My Account page is displayed after successful login
-    Given Login page is opened in header dropdown
-    When I enter in the field 'email' data 'sajowi9588@epeva.com' on Login page
-    And I enter in the field 'password' data '123123' on Login page
-    And I click 'Login' button on Login page
-    Then My Account page is displayed
+#  Scenario:[PARAMS] My Account page is displayed after successful login
+#    Given Login page ismvn opened in header dropdown
+#    When I enter in the field 'email' data 'sajowi9588@epeva.com' on Login page
+#    And I enter in the field 'password' data '123123' on Login page
+#    And I click 'Login' button on Login page
+#    Then My Account page is displayed
 
   Scenario:[ENUM] My Account page is displayed after successful login
     Given Login page is opened in header dropdown
@@ -31,3 +31,6 @@ Feature: As an unregistered user
       | 123123               | password  |
     And  I click Login button on Login page
     Then My Account Page is displayed
+
+  Scenario: Property File check
+    Given User is logged in on Login Page
